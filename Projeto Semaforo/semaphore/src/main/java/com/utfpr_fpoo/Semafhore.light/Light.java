@@ -1,8 +1,8 @@
 package com.utfpr_fpoo.Semafhore.light;
 
-public interface light {
+public interface Light {
 
-    enum OnOff(ON,OFF);
+    enum OnOff{ON,OFF};
 
     void turnOn();
     void turnOff();
