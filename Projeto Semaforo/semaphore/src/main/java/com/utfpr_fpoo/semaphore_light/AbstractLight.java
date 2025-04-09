@@ -1,6 +1,8 @@
+
 package com.utfpr_fpoo.semaphore_light;
 
-public class SimpleLight implements Light {
+public class AbstractLight implements Light {
+    
     private OnOff state = OnOff.OFF;
 
     @Override 

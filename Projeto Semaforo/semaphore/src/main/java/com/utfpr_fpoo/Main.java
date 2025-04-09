@@ -1,11 +1,11 @@
 package com.utfpr_fpoo;
 
-import com.utfpr_fpoo.semaphore_light.SimpleLight;
+import com.utfpr_fpoo.semaphore_light.AbstractLight;
 
 public class Main {
 
     public static void main (String[] args){
-        SimpleLight simpleLight = new SimpleLight();
+        AbstractLight simpleLight = new AbstractLight();
         simpleLight.turnOn();
         boolean state = simpleLight.isOn();
 
