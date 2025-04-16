@@ -1,6 +1,6 @@
-package com.utfpr_fpoo.semaphore_light;
+package com.utfpr_fpoo.semaphore.util;
 
-public interface Light {
+public interface TurnOnOff {
     
     enum OnOff{ON,OFF};
 

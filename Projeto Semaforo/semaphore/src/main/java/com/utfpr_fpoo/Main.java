@@ -1,6 +1,6 @@
 package com.utfpr_fpoo;
 
-import com.utfpr_fpoo.semaphore_light.AbstractLight;
+import com.utfpr_fpoo.semaphore.light.AbstractLight;
 
 public class Main {
 

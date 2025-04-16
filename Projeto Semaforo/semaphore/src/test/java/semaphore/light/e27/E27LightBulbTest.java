@@ -1,11 +1,11 @@
-package semaphore_light_e27;
+package semaphore.light.e27;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import com.utfpr_fpoo.semaphore_light.Light;
-import com.utfpr_fpoo.semaphore_light.e27.E27LightBulb;
+import com.utfpr_fpoo.semaphore.light.e27.E27LightBulb;
+import com.utfpr_fpoo.semaphore.util.TurnOnOff;
 
 
  class E27LightBulbTest {
@@ -14,7 +14,7 @@ import com.utfpr_fpoo.semaphore_light.e27.E27LightBulb;
     void shouldTurnOn (){
         
         //given 
-        Light light = new E27LightBulb();
+        TurnOnOff light = new E27LightBulb();
         //do Action
         light.turnOff();
         light.turnOn();
@@ -25,7 +25,7 @@ import com.utfpr_fpoo.semaphore_light.e27.E27LightBulb;
     void shouldTurnOff (){
         
         //given 
-        Light light = new E27LightBulb();
+        TurnOnOff light = new E27LightBulb();
         //do Action
         light.turnOn();
         light.turnOff();

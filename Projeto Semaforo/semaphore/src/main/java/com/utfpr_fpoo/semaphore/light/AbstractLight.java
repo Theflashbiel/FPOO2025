@@ -1,5 +1,6 @@
 
-package com.utfpr_fpoo.semaphore_light;
+package com.utfpr_fpoo.semaphore.light;
+
 
 public class AbstractLight implements Light {
     
