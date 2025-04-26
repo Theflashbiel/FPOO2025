@@ -14,10 +14,12 @@ public class SpotLight implements TurnOnOff {
 
 
     private Light light;
-    private Image mask;
+    private Image maskOn;
+    private Image maskOff;
 
-    public SpotLight(Image mask){
-        this.mask = mask;
+    public SpotLight(Image maskOn, Image maskOff){
+        this.maskOn = maskOn;
+        this.maskOff = maskOff; 
     }
     
     public void setLight(AbstractLightE27 light){

@@ -40,7 +40,7 @@ class SpotLightTest {
     @Test 
     void shouldReturnCloneOfPosition() {
 
-        SpotLight spot = new SpotLight(null);
+        SpotLight spot = new SpotLight(null,null);
         spot.setLight(new E27LightBulb());
         final int xLeft = 20;
         final int yTop = 50;
@@ -55,7 +55,7 @@ class SpotLightTest {
     
     @Test 
     void shouldReturnCloneofDimension(){
-        SpotLight spot = new SpotLight(null);
+        SpotLight spot = new SpotLight(null,null);
         spot.setLight(new E27LightBulb());
         final int width = 20;
         final int height = 20;
