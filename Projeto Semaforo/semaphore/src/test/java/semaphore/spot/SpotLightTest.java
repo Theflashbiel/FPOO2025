@@ -15,7 +15,7 @@ class SpotLightTest {
     void shouldTurnOn (){
 
         AbstractLightE27 light = new AbstractLightE27();
-        SpotLight spot = new SpotLight(null);
+        SpotLight spot = new SpotLight(null, null);
         spot.setLight(light);
 
         light.turnOff();
@@ -28,7 +28,7 @@ class SpotLightTest {
     void shouldTurnOff (){
 
         AbstractLightE27 light = new AbstractLightE27();
-        SpotLight spot = new SpotLight(null);
+        SpotLight spot = new SpotLight(null, null);
         spot.setLight(light);
 
         light.turnOn();
