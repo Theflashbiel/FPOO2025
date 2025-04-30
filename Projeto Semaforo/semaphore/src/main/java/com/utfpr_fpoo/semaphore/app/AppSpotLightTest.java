@@ -60,19 +60,19 @@ public class AppSpotLightTest {
         spot = createSpotLight("red", 100, 100, 50, 50);
         spot.setLight(new E27LightBulb());
         window.add(spot);
-        TurnOnOff(spot,3_000);
+        TurnOnOff(spot,4_000);
 
         spot = createSpotLight("yellow", 100, 150, 50, 50);
         spot.setLight(new E27LightBulb());
         window.add(spot);
-        TurnOnOff(spot,2_000);
+        TurnOnOff(spot,3_000);
 
        
 
         spot = createSpotLight("green", 100, 200, 50, 50);
         spot.setLight(new E27LightBulb());
         window.add(spot);
-        TurnOnOff(spot,1_000);
+        TurnOnOff(spot,2_000);
     }
     public static void main (String [] args) throws IOException
     {
