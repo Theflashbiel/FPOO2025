@@ -101,9 +101,7 @@ public class SimpleTrafficLight implements Paintable, TrafficLight {
         this.create();
         this.configurePositions();
     }
-
-    
-
+   
     public void setPosition(Point position) {
         this.position = new Point(position);
 
@@ -153,7 +151,5 @@ public class SimpleTrafficLight implements Paintable, TrafficLight {
     public TurnOnOff spotRed() {
         
         return this.red;
-    }
-
- 
+    }  
 }

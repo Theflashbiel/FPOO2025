@@ -98,8 +98,8 @@ public class SimpleTrafficLightControl implements TrafficLightControl {
 
     @Override
     public void turnRed() {
-       this.reset();
-       red.turnOn();
+        this.reset();
+        red.turnOn();
         state = State.RED;
     }
 
@@ -109,5 +109,4 @@ public class SimpleTrafficLightControl implements TrafficLightControl {
         this.reset();
 
     }
-
 }
