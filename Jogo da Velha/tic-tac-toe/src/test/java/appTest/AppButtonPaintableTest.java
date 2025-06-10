@@ -1,6 +1,5 @@
 package appTest;
-import com.utfpr.fpoo.ticTacToe.component.Button;
-
+import com.utfpr.fpoo.ticTacToe.component.button.Button;
 import com.utfpr.fpoo.ticTacToe.gui.MainWindow;
 
 
