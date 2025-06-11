@@ -28,7 +28,7 @@ public class Button extends AbstractComponent {
     super(x, y, width, height);
   }
 
-  private void doMouseOverDecoration(Graphics g) {
+  protected void doMouseOverDecoration(Graphics g) {
 
       Color ant = g.getColor();
       g.setColor(Color.RED);

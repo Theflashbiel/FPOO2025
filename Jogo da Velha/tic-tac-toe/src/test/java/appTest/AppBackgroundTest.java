@@ -5,7 +5,7 @@ import java.net.URL;
 import javax.swing.ImageIcon;
 
 import com.utfpr.fpoo.ticTacToe.gui.MainWindow;
-import com.utfpr.fpoo.ticTacToe.gui.Table;
+import com.utfpr.fpoo.ticTacToe.gui.TableView;
 
 public class AppBackgroundTest {
     static ImageIcon loadImage(String pathWithFileName) {
@@ -19,7 +19,7 @@ public class AppBackgroundTest {
         ImageIcon icon = loadImage(path + "background.jpg");
         window.setBackground(icon);
         icon = loadImage(path + "tic-tac-toe.png");
-        Table table = new Table(50,50,200,200, icon);
+        TableView table = new TableView(50,50,200,200, icon);
         window.add(table);
 
     }
