@@ -86,14 +86,12 @@ public class TableView extends AbstractComponent {
     @Override
     public void paint(Graphics g) {
 
-        if (icon == null)
-            return;
-        int xLeft = position.x;
-        int yTop = position.y;
-        int width = dimension.width;
-        int height = dimension.height;
-
-        g.drawImage(icon.getImage(), xLeft, yTop, width, height, null);
-    }
+       if(icon == null)
+        throw new RuntimeException("Error: icon is null at TableView!");
+    g.drawImage(icon.getImage(),
+    position.x, position.y,
+    width(), height(), null);
+    paintChildren(g);
+  }
 
 }
