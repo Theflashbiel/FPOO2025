@@ -44,6 +44,8 @@ public class AppTableModelTableViewTest {
         ImageIcon icon = loadImage("background.jpg");
         window.setBackground(icon);
         window.add(tableView);
+
+        window.addMouseMotionListener(tableView.mouseMotionListener());
     } 
 
     private void play() throws Exception{

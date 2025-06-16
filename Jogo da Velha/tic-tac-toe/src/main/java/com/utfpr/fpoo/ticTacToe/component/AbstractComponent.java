@@ -48,6 +48,7 @@ public abstract class AbstractComponent implements Paintable{
     public int height(){
         return this.dimension.height;
     }
+    
 public MouseListener mouseListener() {
 	
 		return new MouseListenerAdapter() {
@@ -63,13 +64,10 @@ public MouseListener mouseListener() {
 	}
 	public MouseMotionListener mouseMotionListener() {
         return new MouseMotionAdapter() {
-            @Override
-            public void mouseMoved(MouseEvent e) {
-                boolean inside = isOver(e.getPoint());
-                if (inside != mouseOver) {
-                    mouseOver = inside;
-                    e.getComponent().repaint(); 
-                }
+        @Override
+        public void mouseMoved(MouseEvent me) {
+            mouseOver = isOver( me.getPoint() );
+            onMouseMove(me);
             }
         };
     }
@@ -83,9 +81,11 @@ public MouseListener mouseListener() {
 				(point.y > yTop && point.y < yBotton) );
 	}
 
-    protected void onMouseClick(MouseEvent me){
-
+    protected void onMouseClick(MouseEvent me) {
+    /** The standard behavior is to do absolutely nothing */
     }
-  
+    protected void onMouseMove(MouseEvent me) {
+    /** The standard behavior is to do absolutely nothing */
+    }
     
 }

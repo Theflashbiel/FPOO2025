@@ -3,8 +3,14 @@ package com.utfpr.fpoo.ticTacToe.gui;
 import javax.management.RuntimeErrorException;
 import javax.swing.ImageIcon;
 
+import java.awt.event.MouseEvent;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.utfpr.fpoo.ticTacToe.component.AbstractComponent;
 import com.utfpr.fpoo.ticTacToe.component.button.ImageButton;
+import com.utfpr.fpoo.ticTacToe.event.CellClickEvent;
+import com.utfpr.fpoo.ticTacToe.event.CellClickListener;
 import com.utfpr.fpoo.ticTacToe.model.Mark;
 import com.utfpr.fpoo.ticTacToe.model.table.ReadOnlyTableModel;
 
@@ -87,11 +93,33 @@ public class TableView extends AbstractComponent {
     public void paint(Graphics g) {
 
        if(icon == null)
-        throw new RuntimeException("Error: icon is null at TableView!");
-    g.drawImage(icon.getImage(),
-    position.x, position.y,
-    width(), height(), null);
-    paintChildren(g);
+            throw new RuntimeException("Error: icon is null at TableView!");
+        g.drawImage(icon.getImage(),
+        position.x, position.y,
+        width(), height(), null);
+        paintChildren(g);
   }
+  @Override
+    protected void onMouseMove (MouseEvent me) {
+        for(int lin=0; lin<table.length; lin++) {
+            for(int col=0; col<table[lin].length; col++) {
+                if(table[lin][col].isOver(me.getPoint()))
+                dispatchCellClickEvent(lin, col);
+                }
+            }
+    }
 
-}
+    List<CellClickListener> cellClicklisteners = new ArrayList<>();
+
+    public void addCellClickListener(CellClickListener listener) {
+        cellClicklisteners.add(listener);
+    }
+    public void removeCellClickListener(CellClickListener listener) { 
+        cellClicklisteners.remove(listener);
+    }
+    private void dispatchCellClickEvent(int lin, int col) {
+        CellClickEvent event = new CellClickEvent(lin, col);
+        cellClicklisteners.forEach(listener -> listener.onClick(event));
+    }
+
+}   
